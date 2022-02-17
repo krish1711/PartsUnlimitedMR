@@ -59,7 +59,7 @@
       storage_container: '{{ vmname }}'
       storage_blob: '{{ vmname }}.vhd'
       network_interfaces: '{{ vmname }}'
-      vm_size: Standard_A0
+      vm_size: Standard_B2ms
       admin_username: azureuser
       ssh_password_enabled: false
       ssh_public_keys: 
