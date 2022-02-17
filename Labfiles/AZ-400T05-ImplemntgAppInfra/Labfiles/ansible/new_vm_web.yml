@@ -4,7 +4,7 @@
   gather_facts: False
   vars:
     # Variables 'vnet', 'subnet', 'vmname' and 'resgrp' need to be provided at command line with arg --extra-vars
-    dnsname: '{{ vmname }}.westeurope.cloudapp.azure.com'
+    dnsname: '{{ vmname }}.eastus.cloudapp.azure.com'
     # The DNS name might not be right depending on your region!!
     ip: "{{ lookup ('dig', '{{ dnsname }}') }}"
    
@@ -64,7 +64,7 @@
       ssh_password_enabled: false
       ssh_public_keys: 
         - path: /home/azureuser/.ssh/authorized_keys
-          key_data: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDn4i0NkH4uFL7B87MJBW0TyQcsk99vQNlHyZLJyRielhU2kxy73K4ecOEcYQPu0B58KbQfHM2EooaHbZIDAaZK8K62yaYz5eV7YBMr5TdN9Tw5u1GGT5LrWsOYoHcQtcSnTRbBSWZDFIx5eJWebBxdDh61LbEftyOLg16xsLRIqp6SeAtJANTWNSMCEH96qn4+12eoW8bYQ7flVyR7uyE+7NDKmMaHk0zWUQe0wluHyUnfj15g1tfRvwXyUEMLMagyFrhRh0n/wNBnV8XrX74OjqCseJfh3YnuLxhy4hAmw0di699Q3jTB3xJ8b7yg2NvoAF+lzSkQtiArTjEBVKuv lab-user@ansibleMaster'
+          key_data: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDSrTRNK6EvJuaRp0fHjmT9ls0viHN/jGvJ6/XtlNvpjWwdzQ65hRxnpaqIVFRMFEqUXixQw7wMIS678ukJ0/UNqx6YC/nxC32Rc+CPKhxh3ww4csbi1aPrqS+dYKyPq9HPNyXYsYznFDjJWuw1H9QzKL+a+SbP19ZjC0dNCOGmyj9SLtkA3nnVCYXSFpkPZFm/Svdg02DmYmmJ5ZbB2g+S2bioHWXFKm0c9Id3CyhtzPcZR3vZf59TLVedCCsQDGT8KoNsDfL0oPQqG7Vww1lML836zXLKyv+6BM4FstgKVEzu4fMBafMlruh2ea1DotLpFinhbT7C/ZnpurPuNXL2/5KzzhYqotsUhbfLhkPp7xtL9U9KnH0bF4N/LYA6rWwSZZdJtYItoC+NzqiSCcOgejQ5wcPHopWb0nJ/SPRBvLZqIJAHK0dLn4lYG9W3uGaQoBsBhMJA/hsgvf35iZQUUu4+VupTQLZzpehD43TRVh4gs4yXTu0jzFQGrKRdA2c= kishore@az400m1403vm1'
       image:
         offer: CentOS
         publisher: OpenLogic
